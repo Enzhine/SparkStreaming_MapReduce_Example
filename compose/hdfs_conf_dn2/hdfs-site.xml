@@ -13,18 +13,34 @@
     </property>
     <property>
         <name>dfs.namenode.rpc-address</name>
-        <value>192.168.0.2:8020</value>
+        <value>namenode:8020</value>
     </property>
     <property>
         <name>dfs.datanode.address</name>
-        <value>0.0.0.0:50010</value>
+        <value>0.0.0.0:50011</value>
+    </property>
+    <property>
+        <name>dfs.datanode.ipc.address</name>
+        <value>0.0.0.0:9869</value>
     </property>
     <property>
         <name>dfs.datanode.http.address</name>
-        <value>0.0.0.0:50075</value>
+        <value>0.0.0.0:50076</value>
     </property>
     <property>
         <name>dfs.permissions.enabled</name>
         <value>false</value>
+    </property>
+    <property>
+        <name>dfs.client.use.datanode.hostname</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.datanode.use.datanode.hostname</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.datanode.hostname</name>
+        <value>localhost</value>
     </property>
 </configuration>

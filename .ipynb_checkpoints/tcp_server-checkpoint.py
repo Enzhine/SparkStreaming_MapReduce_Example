@@ -1,7 +1,6 @@
 import feedparser
 import socket
 import time
-import requests
 
 encoding = 'utf-8'
 rss_link = 'https://www.reddit.com/r/AskReddit/new/.rss'
@@ -26,10 +25,10 @@ try:
             print('Time to live passed. Exiting.')
             break
 
-        feed = feedparser.parse(requests.get(rss_link).content)
-        # if feed.status and (feed.status != 200):
-        #     print(f'Bad response {feed.status} received! Exiting.')
-        #     break
+        feed = feedparser.parse(rss_link)
+        if feed.status != 200:
+            print(f'Bad response {feed.status} received! Exiting.')
+            break
 
         _mx_stmp = None
         for i, entry in enumerate(feed.entries):
